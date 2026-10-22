@@ -97,13 +97,13 @@ img {
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding: 24px 0;
+  padding: 16px 0;
   background: transparent;
   transition: all var(--transition-normal);
 }
 
 .navbar-header.scrolled {
-  padding: 14px 0;
+  padding: 10px 0;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
@@ -123,69 +123,34 @@ img {
 
 /* Brand Logo */
 .brand-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3px;
-  transition: transform var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
 }
 
 .brand-logo:hover {
   transform: translateY(-1px);
 }
 
-.brand-top-row {
-  display: flex;
-  align-items: center;
-  gap: 14px;
+.brand-logo-img {
+  height: 68px;
+  width: auto;
+  max-width: 290px;
+  object-fit: contain;
+  display: block;
+  transition: height var(--transition-normal), transform var(--transition-fast), filter var(--transition-fast);
+  filter: drop-shadow(0 2px 8px rgba(8, 26, 56, 0.08));
 }
 
-.logo-icon-wrap {
-  width: 58px;
-  height: 37px;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.02);
+  filter: drop-shadow(0 4px 12px rgba(8, 26, 56, 0.14));
 }
 
-.logo-svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 2px 4px rgba(8, 26, 56, 0.08));
-}
-
-.brand-name-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.brand-malvis {
-  font-size: 27px;
-  font-weight: 800;
-  letter-spacing: 1.2px;
-  line-height: 0.95;
-  color: #081A38;
-}
-
-.brand-industries {
-  font-size: 11.5px;
-  font-weight: 700;
-  letter-spacing: 4.2px;
-  line-height: 1;
-  color: #081A38;
-  margin-top: 4px;
-}
-
-.brand-tagline {
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 1.1px;
-  color: #72859B;
-  margin-top: 2px;
-  white-space: nowrap;
+.navbar-header.scrolled .brand-logo-img {
+  height: 52px;
 }
 
 /* Center Nav Menu */
@@ -2875,10 +2840,28 @@ img {
 }
 
 .footer-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
+  justify-content: center;
+  padding: 12px 22px;
+  background: #FFFFFF;
+  border-radius: 14px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
   text-decoration: none;
+}
+
+.footer-logo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(222, 155, 71, 0.35);
+}
+
+.footer-logo-img {
+  height: 72px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .text-white {
@@ -4129,22 +4112,13 @@ img {
     object-position: 85% center;
   }
 
-  .logo-icon-wrap {
-    width: 44px;
-    height: 30px;
+  .brand-logo-img {
+    height: 48px;
+    max-width: 200px;
   }
 
-  .brand-malvis {
-    font-size: 20px;
-  }
-
-  .brand-industries {
-    font-size: 9.5px;
-    letter-spacing: 2.2px;
-  }
-
-  .brand-tagline {
-    font-size: 9px;
+  .footer-logo-img {
+    height: 60px;
   }
 
   .btn-quote {

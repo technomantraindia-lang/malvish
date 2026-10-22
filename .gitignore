@@ -16,3 +16,6 @@ extract.ps1
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# IDE files
+.vscode/
