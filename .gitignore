@@ -11,6 +11,7 @@ yarn-error.log*
 *.log
 extracted_docx.txt
 extract.ps1
+scratch/
 
 # OS generated files
 .DS_Store

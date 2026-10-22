@@ -87,6 +87,44 @@ img {
   display: block;
 }
 
+/* --- Global Typography System for Headings & Titles --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  color: var(--color-primary-navy);
+}
+
+/* Master Title Classes (Harmonizing all page headings to hero aesthetic) */
+.title-dark,
+.title-line-dark,
+.title-line-1,
+.title-line-2,
+.bold-navy,
+.purpose-title-dark,
+.lets-build-dark {
+  color: var(--color-primary-navy) !important;
+  font-weight: 400 !important;
+}
+
+.title-amber,
+.title-line-amber,
+.title-line-3,
+.bold-amber,
+.purpose-title-amber,
+.lets-build-amber {
+  color: var(--color-amber-gold) !important;
+  font-weight: 500 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+.title-white {
+  color: #FFFFFF !important;
+  font-weight: 400 !important;
+}
+
 /* ==========================================================================
    NAVIGATION BAR (HEADER)
    ========================================================================== */
@@ -899,9 +937,9 @@ img {
 
 .about-title {
   font-size: clamp(38px, 4.2vw, 56px);
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.12;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
@@ -909,7 +947,7 @@ img {
 
 .title-line-dark {
   color: var(--color-primary-navy);
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .title-line-amber {
@@ -1109,7 +1147,7 @@ img {
 
 .about-hero-title {
   font-size: clamp(40px, 4.5vw, 68px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.025em;
   margin-bottom: 24px;
@@ -1123,15 +1161,14 @@ img {
 
 .bold-navy {
   color: var(--color-primary-navy);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .bold-amber {
   color: var(--color-amber-gold);
-  font-weight: 700;
-  background: linear-gradient(135deg, #DE9B47 0%, #C57A22 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  background: none;
+  -webkit-text-fill-color: initial;
 }
 
 .about-hero-description {
@@ -1170,11 +1207,13 @@ img {
 
 .who-we-are-title {
   font-size: clamp(34px, 3.6vw, 46px);
-  font-weight: 800;
+  font-weight: 400;
   color: var(--color-primary-navy);
   line-height: 1.16;
   letter-spacing: -0.025em;
   margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
 }
 
 .who-we-are-text {
@@ -1401,7 +1440,7 @@ img {
 
 .purpose-title {
   font-size: clamp(38px, 4.2vw, 56px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.14;
   letter-spacing: -0.025em;
   margin-bottom: 24px;
@@ -1411,15 +1450,16 @@ img {
 
 .purpose-title-dark {
   color: var(--color-primary-navy);
-  font-weight: 800;
+  font-weight: 400;
+  display: block;
 }
 
 .purpose-title-amber {
-  color: #BA6A1B;
-  font-weight: 700;
-  background: linear-gradient(135deg, #DE953B 0%, #BA6A1B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--color-amber-gold);
+  font-weight: 500;
+  background: none;
+  -webkit-text-fill-color: initial;
+  display: block;
 }
 
 .purpose-description {
@@ -1531,22 +1571,25 @@ img {
 
 .vision-title {
   font-size: clamp(36px, 4vw, 50px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.16;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
 }
 
-.title-white {
+.vision-title .title-white {
   color: #FFFFFF;
+  font-weight: 400;
   display: block;
 }
 
-.title-amber {
+.vision-title .title-amber {
   color: #DE953B;
-  background: linear-gradient(135deg, #F0B25E 0%, #DE953B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  background: none;
+  -webkit-text-fill-color: initial;
   display: block;
 }
 
@@ -2007,7 +2050,7 @@ img {
 
 .lets-build-title {
   font-size: clamp(36px, 4vw, 52px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 24px;
@@ -2017,13 +2060,16 @@ img {
 
 .lets-build-dark {
   color: var(--color-primary-navy);
+  font-weight: 400;
+  display: block;
 }
 
 .lets-build-amber {
   color: var(--color-amber-gold);
-  background: linear-gradient(135deg, #DE9B47 0%, #C57A22 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  background: none;
+  -webkit-text-fill-color: initial;
+  display: block;
 }
 
 .lets-build-description {
@@ -2082,9 +2128,9 @@ img {
 
 .products-title {
   font-size: clamp(34px, 3.8vw, 48px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   color: var(--color-primary-navy);
   display: flex;
   flex-direction: column;
@@ -2261,9 +2307,9 @@ img {
 
 .industries-title {
   font-size: clamp(34px, 3.8vw, 48px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   color: var(--color-primary-navy);
   display: flex;
   flex-direction: column;
@@ -2492,22 +2538,25 @@ img {
 
 .banner-title {
   font-size: clamp(32px, 3.4vw, 44px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.15;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   display: flex;
   flex-direction: column;
 }
 
-.title-white {
+.banner-title .title-white {
   color: #FFFFFF;
+  font-weight: 400;
+  display: block;
 }
 
-.title-amber {
-  color: var(--color-amber-gold);
-  background: linear-gradient(135deg, #F0B369 0%, #DE9B47 50%, #C57A22 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.banner-title .title-amber {
+  color: #DE953B;
+  font-weight: 500;
+  background: none;
+  -webkit-text-fill-color: initial;
+  display: block;
 }
 
 .banner-right {
@@ -2646,7 +2695,7 @@ img {
 
 .sustainability-title {
   font-size: clamp(34px, 3.8vw, 48px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.025em;
   display: flex;
@@ -2660,17 +2709,18 @@ img {
 
 .sustainability-title-line:first-child {
   color: #0B1D33;
+  font-weight: 400;
 }
 
 .sustainability-title .text-navy {
   color: #0B1D33;
-  font-weight: 800;
+  font-weight: 400;
   margin-right: 8px;
 }
 
 .sustainability-title .text-muted {
-  color: #8C98A8;
-  font-weight: 400;
+  color: var(--color-amber-gold);
+  font-weight: 500;
 }
 
 .sustainability-description {
@@ -2771,11 +2821,23 @@ img {
 
 .footer-cta-title {
   font-size: clamp(20px, 2.2vw, 27px);
-  font-weight: 700;
+  font-weight: 400;
   color: #FFFFFF;
   line-height: 1.25;
   margin-bottom: 8px;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+}
+
+.footer-cta-title .title-white {
+  color: #FFFFFF;
+  font-weight: 400;
+  display: inline;
+}
+
+.footer-cta-title .title-amber {
+  color: #DE953B;
+  font-weight: 500;
+  display: inline;
 }
 
 .footer-cta-desc {
@@ -3614,7 +3676,7 @@ img {
 
   .title-line-3 {
     color: var(--color-text-highlight);
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .hero-description,
@@ -4304,7 +4366,7 @@ img {
 
 .products-hero-title {
   font-size: clamp(38px, 4.2vw, 54px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.14;
   letter-spacing: -0.025em;
   margin-bottom: 24px;
@@ -4314,6 +4376,14 @@ img {
 
 .products-hero-title .title-dark {
   color: var(--color-primary-navy);
+  font-weight: 400;
+  display: block;
+}
+
+.products-hero-title .title-amber {
+  color: var(--color-amber-gold);
+  font-weight: 500;
+  display: block;
 }
 
 .products-hero-description {
@@ -4712,9 +4782,24 @@ img {
 
 .strength-title {
   font-size: clamp(34px, 3.8vw, 48px);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.16;
+  letter-spacing: -0.025em;
   margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.strength-title .title-white {
+  color: #FFFFFF;
+  font-weight: 400;
+  display: block;
+}
+
+.strength-title .title-amber {
+  color: #DE953B;
+  font-weight: 500;
+  display: block;
 }
 
 .strength-description {
@@ -4817,10 +4902,13 @@ img {
 
 .products-cta-title {
   font-size: clamp(30px, 3.2vw, 42px);
-  font-weight: 800;
+  font-weight: 400;
   color: var(--color-primary-navy);
   line-height: 1.2;
+  letter-spacing: -0.025em;
   margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
 .products-cta-desc {
@@ -5168,7 +5256,7 @@ img {
 
 .quality-hero-title {
   font-size: clamp(38px, 4.4vw, 56px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.14;
   letter-spacing: -0.025em;
   margin-bottom: 24px;
@@ -5178,10 +5266,14 @@ img {
 
 .quality-hero-title .title-dark {
   color: var(--color-primary-navy);
+  font-weight: 400;
+  display: block;
 }
 
 .quality-hero-title .title-amber {
   color: var(--color-amber-gold);
+  font-weight: 500;
+  display: block;
 }
 
 .quality-hero-description {
@@ -5293,7 +5385,7 @@ img {
 
 .excellence-title {
   font-size: clamp(34px, 3.6vw, 48px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 22px;
@@ -5303,10 +5395,14 @@ img {
 
 .excellence-title .title-dark {
   color: var(--color-primary-navy);
+  font-weight: 400;
+  display: block;
 }
 
 .excellence-title .title-amber {
   color: var(--color-amber-gold);
+  font-weight: 500;
+  display: block;
 }
 
 .excellence-description {
@@ -5480,18 +5576,24 @@ img {
 
 .framework-title {
   font-size: clamp(34px, 3.8vw, 48px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.18;
   letter-spacing: -0.025em;
   margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .framework-title .title-dark {
   color: var(--color-primary-navy);
+  font-weight: 400;
+  display: block;
 }
 
 .framework-title .title-amber {
-  color: #DE953B;
+  color: var(--color-amber-gold);
+  font-weight: 500;
+  display: block;
 }
 
 .framework-desc {
@@ -5675,23 +5777,31 @@ img {
 
 .quality-sustainability-title {
   font-size: clamp(28px, 3.2vw, 44px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.18;
   letter-spacing: -0.025em;
   margin-bottom: 20px;
   color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
 }
 
 .quality-sustainability-title .title-line {
   display: block;
-  white-space: nowrap;
+}
+
+.quality-sustainability-title .title-white {
+  color: #FFFFFF;
+  font-weight: 400;
+  display: block;
 }
 
 .quality-sustainability-title .title-amber {
-  display: inline !important;
-  color: #DE953B;
-  background: none;
-  -webkit-text-fill-color: #DE953B;
+  display: block !important;
+  color: #DE953B !important;
+  font-weight: 500 !important;
+  background: none !important;
+  -webkit-text-fill-color: #DE953B !important;
 }
 
 .quality-sustainability-desc {
@@ -5867,7 +5977,7 @@ img {
 
 .health-safety-title {
   font-size: clamp(34px, 3.8vw, 48px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 20px;
@@ -5876,14 +5986,17 @@ img {
 }
 
 .health-safety-title .title-dark {
-  color: #0A1C2E;
+  color: var(--color-primary-navy);
+  font-weight: 400;
+  display: block;
 }
 
 .health-safety-title .title-amber {
-  display: inline !important;
-  color: #DE953B !important;
+  display: block !important;
+  color: var(--color-amber-gold) !important;
+  font-weight: 500 !important;
   background: none !important;
-  -webkit-text-fill-color: #DE953B !important;
+  -webkit-text-fill-color: initial !important;
 }
 
 .health-safety-desc {
@@ -6062,17 +6175,23 @@ img {
 
 .quality-cta-title {
   font-size: clamp(32px, 3.4vw, 44px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  display: flex;
+  flex-direction: column;
 }
 
 .quality-cta-title .title-white {
   color: #FFFFFF;
+  font-weight: 400;
+  display: block;
 }
 
 .quality-cta-title .title-amber {
   color: #DE953B;
+  font-weight: 500;
+  display: block;
 }
 
 .quality-cta-right {
@@ -6294,7 +6413,7 @@ img {
 
 .contact-hero-title {
   font-size: clamp(38px, 4.2vw, 54px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.12;
   letter-spacing: -0.025em;
   margin-bottom: 20px;
@@ -6303,14 +6422,17 @@ img {
 }
 
 .contact-hero-title .title-dark {
-  color: #0A1C2E;
+  color: var(--color-primary-navy);
+  font-weight: 400;
+  display: block;
 }
 
 .contact-hero-title .title-amber {
-  display: inline !important;
-  color: #DE953B !important;
+  display: block !important;
+  color: var(--color-amber-gold) !important;
+  font-weight: 500 !important;
   background: none !important;
-  -webkit-text-fill-color: #DE953B !important;
+  -webkit-text-fill-color: initial !important;
 }
 
 .contact-hero-desc {
@@ -6468,10 +6590,12 @@ img {
 
 .contact-form-heading {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 400;
   color: #0A1C2E;
   margin-bottom: 8px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  display: flex;
+  gap: 8px;
 }
 
 .contact-form-sub {
@@ -6649,10 +6773,12 @@ img {
 
 .reach-card-heading {
   font-size: 32px;
-  font-weight: 800;
+  font-weight: 400;
   color: #FFFFFF;
   margin-bottom: 12px;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  display: flex;
+  gap: 8px;
 }
 
 .reach-card-sub {
@@ -6801,7 +6927,7 @@ img {
 
 .location-title {
   font-size: clamp(34px, 3.8vw, 48px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 18px;
@@ -6810,14 +6936,17 @@ img {
 }
 
 .location-title .title-dark {
-  color: #0A1C2E;
+  color: var(--color-primary-navy);
+  font-weight: 400;
+  display: block;
 }
 
 .location-title .title-amber {
-  display: inline !important;
-  color: #DE953B !important;
+  display: block !important;
+  color: var(--color-amber-gold) !important;
+  font-weight: 500 !important;
   background: none !important;
-  -webkit-text-fill-color: #DE953B !important;
+  -webkit-text-fill-color: initial !important;
 }
 
 .location-desc {
@@ -7013,7 +7142,7 @@ img {
 
 .contact-cta-title {
   font-size: clamp(34px, 3.8vw, 48px);
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.15;
   letter-spacing: -0.025em;
   margin-bottom: 16px;
@@ -7023,11 +7152,14 @@ img {
 
 .contact-cta-title .title-white {
   color: #FFFFFF;
+  font-weight: 400;
+  display: block;
 }
 
 .contact-cta-title .title-amber {
-  display: inline !important;
+  display: block !important;
   color: #DE953B !important;
+  font-weight: 500 !important;
   background: none !important;
   -webkit-text-fill-color: #DE953B !important;
 }
